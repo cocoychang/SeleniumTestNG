@@ -2,9 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/cocoy/IdeaProjects/SeleniumTestNG/src/test/java/testCases">
+
+        <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="testCases.TestCase01">
-
             </class>
         </classes>
     </test>
