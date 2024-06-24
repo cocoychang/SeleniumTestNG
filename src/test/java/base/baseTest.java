@@ -31,16 +31,16 @@ public class baseTest {
 
 
 
-    @BeforeTest
-    //@Parameters("browser")
-    public void setUp() {
+    @BeforeTest(alwaysRun = true)
+    @Parameters({"browser"})
+    public void setUp(String browser) {
         //Initialize here you driver and html report
         sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/extentReport.html");
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
         extent.setSystemInfo("HostName", "RHEL8");
         sparkReporter.config().setDocumentTitle("Automation Reports");
-        setupDriver("Chrome");
+        setupDriver(browser);
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
