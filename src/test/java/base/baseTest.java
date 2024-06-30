@@ -43,12 +43,13 @@ public class baseTest {
         setupDriver(browser);
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @BeforeMethod
     public void beforeMethod(Method testMethod) {
         logger = extent.createTest(testMethod.getName());
+
     }
 
     @AfterMethod
