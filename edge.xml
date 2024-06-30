@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Chrome">
-    <test verbose="2" preserve-order="true" name="chrome">
+<suite name="edge">
+    <test verbose="2" preserve-order="true" name="edge">
 
-        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="browser" value="edge"></parameter>
         <classes>
             <class name="testCases.TestCase01">
             </class>
